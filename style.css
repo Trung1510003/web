@@ -67,7 +67,7 @@ body {
 .banner .content .title button {
     /* text-decoration: none; Bỏ gạch chân */
     color: inherit; /* Giữ nguyên màu chữ */
-    transition: background 0.5s ease; /* Hiệu ứng chuyển màu */
+    transition: background 1.5s ease; /* Hiệu ứng chuyển màu */
 }
 
 .banner .content .title button:hover {
