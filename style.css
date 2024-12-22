@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; 
+}
+
+.banner .content {
+    position: relative;
+    z-index: 1; 
+}
+
+.banner .content .title {
+    font-family: 'Hallowed Grounds';
+    font-size: 100px;
+    opacity: 0; 
+    transition: opacity 1s ease-in; 
+}
+
+.banner .content p {
+    text-align: center;
+    font-size: 30px;
+    opacity: 0; 
+    transition: opacity 1s ease-in; 
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    mask-image: url(ink_lv2.gif); 
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+
+    animation: revealMask 5s forwards;
+}
+
+@keyframes revealMask {
+    0% {
+        mask-position: center top;
+    }
+    100% {
+        mask-position: center bottom;
+    }
+}
+
+.banner .content .title a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: inherit; /* Giữ nguyên màu chữ */
+    transition: background 0.5s ease; /* Hiệu ứng chuyển màu */
+}
+
+.banner .content .title a:hover {
+    background-image: linear-gradient(to right, #6e1e0a, #ff7e5f); /* Gradient màu */
+    -webkit-background-clip: text; /* Clip background vào chữ */
+    color: transparent; /* Đảm bảo chữ không có màu, dùng gradient làm màu */
+}
+
+
+
+.banner.animation-done .content .title,
+.banner.animation-done .content p {
+    opacity: 1; 
+}
