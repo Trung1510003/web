@@ -18,13 +18,6 @@ body {
     z-index: 1; 
 }
 
-.banner .content .title {
-    font-family: 'Hallowed Grounds';
-    font-size: 100px;
-    opacity: 0; 
-    transition: opacity 1s ease-in; 
-}
-
 .banner .content p {
     text-align: center;
     font-size: 30px;
@@ -49,6 +42,19 @@ body {
     animation: revealMask 5s forwards;
 }
 
+.banner .content .title button {
+    font-family: 'Hallowed Grounds';
+    background-color: transparent; /* Làm nền trong suốt */
+    border: 0px solid #fff; /* Viền trắng */
+    color: #fff; /* Màu chữ trắng */
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    padding: 10px 20px; /* Khoảng cách trong nút */
+    font-size: 100px; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ bàn tay */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
 @keyframes revealMask {
     0% {
         mask-position: center top;
@@ -58,13 +64,13 @@ body {
     }
 }
 
-.banner .content .title a {
-    text-decoration: none; /* Bỏ gạch chân */
+.banner .content .title button {
+    /* text-decoration: none; Bỏ gạch chân */
     color: inherit; /* Giữ nguyên màu chữ */
     transition: background 0.5s ease; /* Hiệu ứng chuyển màu */
 }
 
-.banner .content .title a:hover {
+.banner .content .title button:hover {
     background-image: linear-gradient(to right, #6e1e0a, #ff7e5f); /* Gradient màu */
     -webkit-background-clip: text; /* Clip background vào chữ */
     color: transparent; /* Đảm bảo chữ không có màu, dùng gradient làm màu */
@@ -72,7 +78,7 @@ body {
 
 
 
-.banner.animation-done .content .title,
+.banner.animation-done .content .title button,
 .banner.animation-done .content p {
     opacity: 1; 
 }

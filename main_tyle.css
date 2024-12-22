@@ -12,6 +12,7 @@ body{
     radial-gradient(
         at 50% 50%, #2d2a44, #1d1b34
     );
+    
 }
 ::-webkit-scrollbar{
     width: 0;
@@ -26,19 +27,30 @@ header img{
     width: 30px;
 }
 header{
-    width: min(1200px, 90vw);
-    margin: auto;
+    position: relative;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: #000;
     height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 header nav ul{
+    position: absolute;
+    top: 0;
+    left: 150px;
     display: flex;
-    gap: 30px;
+    gap: 80px;
+    height: 70px;
+    align-items: center;
 }
-main{
+li {
+    font-family: 'Hallowed Grounds';
+    font-size: 30px;
 }
+
 main .banner{
     height: 100vh;
     display: flex;
@@ -52,6 +64,8 @@ main .banner{
 h1, h2, h3, h4, h5, h6{
     font-weight: 500;
 }
+
+/* button */
 .banner button{
     all: unset;
     border: 1px solid #afaeae55;
@@ -67,8 +81,12 @@ h1, h2, h3, h4, h5, h6{
     background-color: #c691e6;
     color: #040018;
     box-shadow: 0 0 50px #c691e6;
-    
 }
+#mot, #hai {
+    margin: 16px;
+}
+/* end button */
+
 h1{
     --to: left;
     font-size: 4em;

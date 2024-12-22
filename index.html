@@ -9,43 +9,23 @@
 <body>
     <div class="banner">
       <div class="content">
-        <!-- Thay chữ thành liên kết nhưng không mở tab mới -->
         <div class="title">
-          <a href="#" id="loadMain">CÔNG NGHỆ PHẦN MỀM</a>
+          <!-- Đảm bảo target="iframe" -->
+          <button type="button" onclick="window.location.href='main.html'">CÔNG NGHỆ PHẦN MỀM</button>
         </div>
         <p>Phan Ngọc Quý - Dương Văn Quân - Nguyễn Minh Trung</p>
       </div>
     </div>
 
-    <!-- Khu vực để hiển thị nội dung của main.html -->
-    <div id="mainContent" style="margin-top: 20px;"></div>
+    <!-- Thêm iframe để load nội dung main.html vào -->
+    <!-- <iframe name="iframe" style="width: 100%; height: 100vh; border: none;"></iframe> -->
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
           const banner = document.querySelector(".banner");
-          const mainLink = document.getElementById("loadMain");
-          const contentArea = document.getElementById("mainContent");
-
-          // Thêm hiệu ứng animation cho banner
           setTimeout(() => {
               banner.classList.add("animation-done");
           }, 5000); // Sau 5 giây (thời gian hoạt ảnh)
-
-          // Xử lý sự kiện nhấp vào liên kết
-          mainLink.addEventListener("click", (event) => {
-              event.preventDefault(); // Ngăn liên kết mở trang mới
-              
-              // Tải nội dung file main.html bằng AJAX
-              fetch("main.html")
-                  .then(response => response.text())
-                  .then(data => {
-                      contentArea.innerHTML = data; // Hiển thị nội dung vào khu vực contentArea
-                  })
-                  .catch(error => {
-                      contentArea.innerHTML = "<p>Error loading content.</p>";
-                      console.error("Error:", error);
-                  });
-          });
       });
     </script>
 </body>
