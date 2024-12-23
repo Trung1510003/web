@@ -15,9 +15,8 @@
         <div class="image">
             <img src="login.png" alt="">
         </div>
-        <!-- <p>First time here? <span class="text-white">Sign up for free</span></p> -->
     </header>
-    <form action="login.html">
+    <form action="index.html">
 
         <input 
         type="email" 
@@ -25,24 +24,43 @@
         placeholder="Your email"
         required>
 
-        <input 
-        type="password" 
-        name="password" 
-        placeholder="Password"
-        minlength="6"
-        required>
+        <div class="password-container">
+            <input 
+            id="password" 
+            type="password" 
+            name="password" 
+            placeholder="Password"
+            minlength="6"
+            required>
+            <span id="toggle-password" class="toggle-icon">👁️</span>
+        </div>
+
         <a href="">Forgot password</a>
 
-        <button type="button">Sign in</button>
-        <!-- <button type="button" onclick="window.location.href='main.html'">Sign in</button> -->
+        <button type="submit">Sign in</button>
 
-        
         <div class="or">or</div>
-        <button class="sso" type="button">Sign up for free</button>
+        <button class="sso" type="button" onclick="window.location.href='signup.html'">Sign up for free</button>
         <p>
             You acknowledge that you read, and agree, to our <a href="https://termify.io/terms-of-service-generator?gad_source=1&gclid=CjwKCAiAjp-7BhBZEiwAmh9rBSKim_n_ABHRmq-wPurU8L0eK0e6hlolgCnmPQEQ5S5yA1kVdPg6qBoC180QAvD_BwE">Terms of Service</a> and our <a href="https://www.astartingpoint.com/static/privacy.html?gad_source=1&gclid=CjwKCAiAjp-7BhBZEiwAmh9rBY1rpKodNvkCELoSDb8fu5dpvYsy-CD4tfnyREJWuKFb-iURHKXKMhoCGhIQAvD_BwE">Privacy Policy</a>.
         </p>
     </form>
+
+    <script>
+        // Lấy các phần tử
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("toggle-password");
+
+        // Thêm sự kiện click
+        togglePassword.addEventListener("click", function () {
+            // Kiểm tra loại input
+            const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput.setAttribute("type", type);
+
+            // Đổi biểu tượng
+            this.textContent = type === "password" ? "👁️" : "🙈";
+        });
+    </script>
 </body>
 
 </html>
