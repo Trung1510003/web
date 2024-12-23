@@ -12,7 +12,10 @@
 <body>
     <header>
         <h1>Hi, welcome back!</h1>
-        <p>First time here? <span class="text-white">Sign up for free</span></p>
+        <div class="image">
+            <img src="login.png" alt="">
+        </div>
+        <!-- <p>First time here? <span class="text-white">Sign up for free</span></p> -->
     </header>
     <form action="login.html">
 
@@ -28,15 +31,16 @@
         placeholder="Password"
         minlength="6"
         required>
-        <p>Password must be at least 6 characters</p>
+        <a href="">Forgot password</a>
 
-        <button type="submit">Sign in</button>
+        <button type="button">Sign in</button>
+        <!-- <button type="button" onclick="window.location.href='main.html'">Sign in</button> -->
 
-        <p class="text-white">Sign in using magic link</p>
+        
         <div class="or">or</div>
-        <button class="sso" type="button">Login with phone number</button>
+        <button class="sso" type="button">Sign up for free</button>
         <p>
-            You acknowledge that you read, and agree, to our <a>Terms of Service</a> and our <a>Privacy Policy</a>.
+            You acknowledge that you read, and agree, to our <a href="https://termify.io/terms-of-service-generator?gad_source=1&gclid=CjwKCAiAjp-7BhBZEiwAmh9rBSKim_n_ABHRmq-wPurU8L0eK0e6hlolgCnmPQEQ5S5yA1kVdPg6qBoC180QAvD_BwE">Terms of Service</a> and our <a href="https://www.astartingpoint.com/static/privacy.html?gad_source=1&gclid=CjwKCAiAjp-7BhBZEiwAmh9rBY1rpKodNvkCELoSDb8fu5dpvYsy-CD4tfnyREJWuKFb-iURHKXKMhoCGhIQAvD_BwE">Privacy Policy</a>.
         </p>
     </form>
 </body>

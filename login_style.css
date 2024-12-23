@@ -51,6 +51,7 @@ h1 {
 form {
     display: flex;
     margin: auto;
+    position: relative;
     margin-block: 30px;
     width: min(300px, 90vw);
     gap: 15px;
@@ -73,13 +74,28 @@ form * {
 form input {
     color: #fff;
 }
+
+
+body form a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+}
+.image img {
+    width: 50px;
+    height: 50px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 form button {
     cursor: pointer;
+    background-color: #3970b0;
+    color: #fff;
 }
-form button[type="submit"] {
-    background-color: #fff;
-    color: #1C1C1E;
-}
+
+
+
 .or {
     position: relative;
 }

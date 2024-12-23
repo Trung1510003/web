@@ -47,12 +47,12 @@ body {
     background-color: transparent; /* Làm nền trong suốt */
     border: 0px solid #fff; /* Viền trắng */
     color: #fff; /* Màu chữ trắng */
-    opacity: 0;
-    transition: opacity 1s ease-in;
+    /* opacity: 0; */
+    transition: opacity 3s ease-in;
     padding: 10px 20px; /* Khoảng cách trong nút */
     font-size: 100px; /* Kích thước chữ */
     cursor: pointer; /* Con trỏ bàn tay */
-    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu */
+    transition: background-color 1s, color 0.3s; /* Hiệu ứng chuyển màu */
 }
 
 @keyframes revealMask {
@@ -64,11 +64,10 @@ body {
     }
 }
 
-.banner .content .title button {
-    /* text-decoration: none; Bỏ gạch chân */
-    color: inherit; /* Giữ nguyên màu chữ */
-    transition: background 1.5s ease; /* Hiệu ứng chuyển màu */
-}
+/* .banner .content .title button {
+    color: inherit; 
+    transition: background 1.5s ease; 
+} */
 
 .banner .content .title button:hover {
     background-image: linear-gradient(to right, #6e1e0a, #ff7e5f); /* Gradient màu */
@@ -76,9 +75,6 @@ body {
     color: transparent; /* Đảm bảo chữ không có màu, dùng gradient làm màu */
 }
 
-
-
-.banner.animation-done .content .title button,
 .banner.animation-done .content p {
     opacity: 1; 
 }
